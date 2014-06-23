@@ -1,1 +1,1 @@
-web: gunicorn dupont_pioneer.wsgi
+web: gunicorn dupont_pionner.wsgi
