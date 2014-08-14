@@ -19,12 +19,12 @@ class Farm(models.Model):
 	sales_representative = models.CharField(max_length=100, verbose_name="Sales Representative")
 	email = models.EmailField(verbose_name="Email")
 	decision_maker = models.CharField(max_length=100, verbose_name="Decision Maker")
-	canola_roundup = models.IntegerField(verbose_name="Canola Roundup Ready")
-	canola_ll = models.IntegerField(verbose_name="Canola (LL)")
-	canola_cl = models.IntegerField(verbose_name="Canola (CL)")
-	canola_speciality = models.IntegerField(verbose_name="Canola (Speciality)")
-	corn = models.IntegerField(verbose_name="Corn")
-	soybean = models.IntegerField(verbose_name="Soybean")
+	canola_roundup = models.IntegerField(verbose_name="Canola Roundup Ready", null=True, blank=True)
+	canola_ll = models.IntegerField(verbose_name="Canola (LL)", null=True, blank=True)
+	canola_cl = models.IntegerField(verbose_name="Canola (CL)", null=True, blank=True)
+	canola_speciality = models.IntegerField(verbose_name="Canola (Speciality)", null=True, blank=True)
+	corn = models.IntegerField(verbose_name="Corn", null=True, blank=True)
+	soybean = models.IntegerField(verbose_name="Soybean", null=True, blank=True)
 
 
 

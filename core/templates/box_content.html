@@ -11,12 +11,12 @@
 		<p><b>Decision Maker:</b> {{ polygon.farm_info.decision_maker }}</p>
 		<b>Products:</b>
 		<ul>
-			<li>Canola (Roundup Ready): {{ polygon.farm_info.canola_roundup }} acs</li>
-			<li>Canola (LL): {{ polygon.farm_info.canola_ll }} acs</li>
-			<li>Canola (CL): {{ polygon.farm_info.canola_cl }} acs</li>
-			<li>Canola (Speciality): {{ polygon.farm_info.canola_speciality }} acs</li>
-			<li>Corn: {{ polygon.farm_info.corn }} acs</li>
-			<li>Soybean: {{ polygon.farm_info.soybean }} acs</li>
+			{% if polygon.farm_info.canola_roundup and polygon.farm_info.canola_roundup != 0 %}<li>Canola (Roundup Ready): {{ polygon.farm_info.canola_roundup }} acs</li>{% endif %}
+			{% if polygon.farm_info.canola_ll and polygon.farm_info.canola_ll != 0 %}<li>Canola (LL): {{ polygon.farm_info.canola_ll }} acs</li>{% endif %}
+			{% if polygon.farm_info.canola_cl and polygon.farm_info.canola_cl != 0 %}<li>Canola (CL): {{ polygon.farm_info.canola_cl }} acs</li>{% endif %}
+			{% if polygon.farm_info.canola_speciality and polygon.farm_info.canola_speciality != 0 %}<li>Canola (Speciality): {{ polygon.farm_info.canola_speciality }} acs</li>{% endif %}
+			{% if polygon.farm_info.corn and polygon.farm_info.corn != 0 %}<li>Corn: {{ polygon.farm_info.corn }} acs</li>{% endif %}
+			{% if polygon.farm_info.soybean and polygon.farm_info.soybean != 0 %}<li>Soybean: {{ polygon.farm_info.soybean }} acs</li>{% endif %}
 		</ul>
 	{% endif %}
 	{% if user.is_superuser %}
