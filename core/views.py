@@ -161,6 +161,10 @@ def remove_info(request, farm_id):
 
 def login_aux(request):
 	error = None
+	try:
+		login_picture = LoginPicture.objects.all().order_by('-id')[0]
+	except:
+		login_picture = None
 	if request.method == "POST":
 	    username = request.POST['username']
 	    password = request.POST['password']
@@ -175,7 +179,7 @@ def login_aux(request):
 	    else:
 	    	error = "Invalid username/password"
 
-	return render(request, 'login.html', {'error':error})
+	return render(request, 'login.html', {'error':error, 'login_picture':login_picture})
 
 
 def logout_aux(request):

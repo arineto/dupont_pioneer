@@ -5,3 +5,4 @@ from core.models import *
 admin.site.register(Polygon)
 admin.site.register(Farm)
 admin.site.register(Product)
+admin.site.register(LoginPicture)

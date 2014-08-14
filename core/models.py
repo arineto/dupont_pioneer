@@ -42,3 +42,7 @@ class Product(models.Model):
 
 	def __unicode__(self):
 		return self.name
+
+
+class LoginPicture(models.Model):
+	picture = models.FileField(upload_to="login_pictures/")
